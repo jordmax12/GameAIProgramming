@@ -380,6 +380,7 @@ bool SoccerTeam::isPassSafeFromOpponent(Vector2D    from,
 //  tests a pass from position 'from' to position 'target' against each member
 //  of the opposing team. Returns true if the pass can be made without
 //  getting intercepted
+//
 //------------------------------------------------------------------------
 bool SoccerTeam::isPassSafeFromAllOpponents(Vector2D                from,
                                             Vector2D                target,
@@ -409,6 +410,7 @@ bool SoccerTeam::isPassSafeFromAllOpponents(Vector2D                from,
 //  kicked in that direction with the given power. If a possible shot is 
 //  found, the function will immediately return true, with the target 
 //  position stored in the vector ShotTarget.
+//
 //------------------------------------------------------------------------
 bool SoccerTeam::CanShoot(Vector2D  BallPos,
                           double     power, 
@@ -563,9 +565,16 @@ void SoccerTeam::Render()const
 //------------------------- CreatePlayers --------------------------------
 //
 //  creates the players
+//
+// **JM** need to figure out how to create a ref! **JM**
 //------------------------------------------------------------------------
 void SoccerTeam::CreatePlayers()
 {
+  if (Color() == green)
+  {
+	
+  }
+
   if (Color() == blue)
   {
     //goalkeeper
@@ -645,7 +654,7 @@ void SoccerTeam::CreatePlayers()
     m_Players.push_back(new GoalKeeper(this,
                                16,
                                TendGoal::Instance(),
-                               Vector2D(0,-1),
+                               Vector2D(0,1),
                                Vector2D(0.0, 0.0),
                                Prm.PlayerMass,
                                Prm.PlayerMaxForce,

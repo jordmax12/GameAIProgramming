@@ -96,6 +96,8 @@ private:
     ViewDistance                = GetNextParameterDouble(); 
     bNonPenetrationConstraint   = GetNextParameterBool(); 
 
+	refMass                     = GetNextParameterFloat();
+
 
     BallWithinReceivingRangeSq = BallWithinReceivingRange * BallWithinReceivingRange;
     KeeperInBallRangeSq      = KeeperInBallRange * KeeperInBallRange;
@@ -213,6 +215,8 @@ public:
 
   //zero this to turn the constraint off
   bool bNonPenetrationConstraint;
+
+  float refMass;
 
 };
 

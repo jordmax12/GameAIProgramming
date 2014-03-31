@@ -99,6 +99,9 @@
     <ClCompile Include="..\Common\misc\WindowUtils.cpp">
       <Filter>common</Filter>
     </ClCompile>
+    <ClCompile Include="Referee.cpp">
+      <Filter>Entity related</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="constants.h">
@@ -223,6 +226,9 @@
     </ClInclude>
     <ClInclude Include="..\Common\misc\WindowUtils.h">
       <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="Referee.h">
+      <Filter>Entity related</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

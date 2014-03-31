@@ -116,7 +116,7 @@
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>C:\Users\Al Gore Rhythm\Desktop\VS8 projects\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\jordan.max\Desktop\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -138,6 +138,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ParamLoader.cpp" />
+    <ClCompile Include="Referee.cpp" />
     <ClCompile Include="SoccerPitch.cpp" />
     <ClCompile Include="SoccerTeam.cpp" />
     <ClCompile Include="SteeringBehaviors.cpp" />
@@ -165,6 +166,7 @@
     <ClInclude Include="constants.h" />
     <ClInclude Include="Goal.h" />
     <ClInclude Include="ParamLoader.h" />
+    <ClInclude Include="Referee.h" />
     <ClInclude Include="SoccerPitch.h" />
     <ClInclude Include="SoccerTeam.h" />
     <ClInclude Include="SteeringBehaviors.h" />

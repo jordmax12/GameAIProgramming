@@ -1,9 +1,51 @@
-﻿Build started 3/30/2014 2:40:34 PM.
-     1>Project "C:\Users\Al Gore Rhythm\Desktop\VS8 projects\Buckland_Chapter4-SimpleSoccer\SimpleSoccer.vcxproj" on node 2 (Build target(s)).
-     1>Link:
-         SimpleSoccer.vcxproj -> C:\Users\Al Gore Rhythm\Desktop\VS8 projects\Buckland_Chapter4-SimpleSoccer\.\Debug\SimpleSoccer.exe
-     1>Done Building Project "C:\Users\Al Gore Rhythm\Desktop\VS8 projects\Buckland_Chapter4-SimpleSoccer\SimpleSoccer.vcxproj" (Build target(s)).
+﻿Build started 3/31/2014 3:00:01 PM.
+     1>Project "C:\Users\jordan.max\Desktop\Soccer_jordanMax\SimpleSoccer.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\jordan.max\Desktop\Common /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo".\Debug/" /Fd".\Debug/vc120.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt FieldPlayer.cpp FieldPlayerStates.cpp GoalKeeperStates.cpp Goalkeeper.cpp PlayerBase.cpp SoccerPitch.cpp SoccerTeam.cpp SteeringBehaviors.cpp SupportSpotCalculator.cpp TeamStates.cpp
+         SoccerTeam.cpp
+         Generating Code...
+         Compiling...
+         TeamStates.cpp
+         SupportSpotCalculator.cpp
+         SteeringBehaviors.cpp
+         SoccerPitch.cpp
+         PlayerBase.cpp
+         Goalkeeper.cpp
+         GoalKeeperStates.cpp
+         FieldPlayerStates.cpp
+         FieldPlayer.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug/SimpleSoccer.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:".\Debug/SimpleSoccer.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\SimpleSoccer.lib" /MACHINE:X86 /SAFESEH .\Debug\Script1.res
+         .\Debug/main.obj
+         .\Debug/ParamLoader.obj
+         .\Debug/SoccerPitch.obj
+         .\Debug/SoccerTeam.obj
+         .\Debug/SteeringBehaviors.obj
+         .\Debug/SupportSpotCalculator.obj
+         .\Debug/FieldPlayerStates.obj
+         .\Debug/GoalKeeperStates.obj
+         .\Debug/TeamStates.obj
+         .\Debug/MessageDispatcher.obj
+         .\Debug/SoccerMessages.obj
+         .\Debug/BaseGameEntity.obj
+         .\Debug/EntityManager.obj
+         .\Debug/FieldPlayer.obj
+         .\Debug/Goalkeeper.obj
+         .\Debug/PlayerBase.obj
+         .\Debug/SoccerBall.obj
+         .\Debug/Cgdi.obj
+         .\Debug/DebugConsole.obj
+         .\Debug/FrameCounter.obj
+         .\Debug/iniFileLoaderBase.obj
+         .\Debug/PrecisionTimer.obj
+         .\Debug/Vector2d.obj
+         .\Debug/WindowUtils.obj
+         SimpleSoccer.vcxproj -> C:\Users\jordan.max\Desktop\Soccer_jordanMax\.\Debug\SimpleSoccer.exe
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\bscmake.exe /nologo /o".\Debug/SimpleSoccer.bsc" .\Debug\main.sbr .\Debug\ParamLoader.sbr .\Debug\SoccerPitch.sbr .\Debug\SoccerTeam.sbr .\Debug\SteeringBehaviors.sbr .\Debug\SupportSpotCalculator.sbr .\Debug\FieldPlayerStates.sbr .\Debug\GoalKeeperStates.sbr .\Debug\TeamStates.sbr .\Debug\MessageDispatcher.sbr .\Debug\SoccerMessages.sbr .\Debug\BaseGameEntity.sbr .\Debug\EntityManager.sbr .\Debug\FieldPlayer.sbr .\Debug\Goalkeeper.sbr .\Debug\PlayerBase.sbr .\Debug\SoccerBall.sbr .\Debug\Cgdi.sbr .\Debug\DebugConsole.sbr .\Debug\FrameCounter.sbr .\Debug\iniFileLoaderBase.sbr .\Debug\PrecisionTimer.sbr .\Debug\Vector2d.sbr .\Debug\WindowUtils.sbr
+     1>Done Building Project "C:\Users\jordan.max\Desktop\Soccer_jordanMax\SimpleSoccer.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.08
+Time Elapsed 00:00:13.20

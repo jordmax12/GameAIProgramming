@@ -36,7 +36,7 @@ class SoccerTeam
 {
 public:
   
-  enum team_color {blue, red};
+	enum team_color { blue, red, green};
 
 private:
 
@@ -48,6 +48,7 @@ private:
 
   //pointers to the team members
   std::vector<PlayerBase*>  m_Players;
+  std::vector<PlayerBase*>  m_Ref;
 
   //a pointer to the soccer pitch
   SoccerPitch*              m_pPitch;
@@ -158,7 +159,7 @@ public:
   PlayerBase* DetermineBestSupportingAttacker();
   
 
-  const std::vector<PlayerBase*>& Members()const{return m_Players;}  
+  const std::vector<PlayerBase*>& Members()const{return m_Players;} 
 
   StateMachine<SoccerTeam>* GetFSM()const{return m_pStateMachine;}
   

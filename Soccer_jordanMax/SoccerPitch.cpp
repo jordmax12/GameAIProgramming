@@ -38,9 +38,16 @@ SoccerPitch::SoccerPitch(int cx, int cy):m_cxClient(cx),
    
 
 
-  m_pBlueGoal = new Goal( Vector2D( m_pPlayingArea->Right(), (cy-Prm.GoalWidth)/1.6),
+ m_pBlueGoal = new Goal( Vector2D( m_pPlayingArea->Right(), (cy-Prm.GoalWidth)/1.6),
                           Vector2D(m_pPlayingArea->Right(), cy - (cy-Prm.GoalWidth)/1.6),
-                          Vector2D(-1,0));
+                          Vector2D(-1,0)); 
+
+   /******************JM IMPLEMENTATION
+   m_pGreenArea = new Goal(Vector2D(m_pPlayingArea->Right(), (cy - Prm.GoalWidth) / 1.6),
+	  Vector2D(m_pPlayingArea->Left(), cy - (cy - Prm.GoalWidth) / 1.6),
+	  Vector2D(-1, 0));
+	  *******************************/
+
 
 
   //create the soccer ball
@@ -53,6 +60,7 @@ SoccerPitch::SoccerPitch(int cx, int cy):m_cxClient(cx),
   //create the teams 
   m_pRedTeam  = new SoccerTeam(m_pRedGoal, m_pBlueGoal, this, SoccerTeam::red);
   m_pBlueTeam = new SoccerTeam(m_pBlueGoal, m_pRedGoal, this, SoccerTeam::blue);
+  //m_pGreenRef = new SoccerTeam(m_pGreenArea, m_pGreenArea, this, SoccerTeam::green);
 
   //make sure each team knows who their opponents are
   m_pRedTeam->SetOpponents(m_pBlueTeam);

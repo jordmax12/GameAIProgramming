@@ -37,9 +37,11 @@ public:
 
   SoccerTeam*          m_pRedTeam;
   SoccerTeam*          m_pBlueTeam;
+  SoccerTeam*		   m_pGreenRef; //jm implementation 
 
   Goal*                m_pRedGoal;
   Goal*                m_pBlueGoal;
+  Goal*				   m_pGreenArea; //jm implementation 
    
   //container for the boundary walls
   std::vector<Wall2D>  m_vecWalls;
