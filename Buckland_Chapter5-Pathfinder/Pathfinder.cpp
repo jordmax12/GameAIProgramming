@@ -91,12 +91,14 @@ double Pathfinder::GetTerrainCost(const brush_type brush)
   const double cost_normal = 1.0;
   const double cost_water  = 2.0;
   const double cost_mud    = 1.5;
+  const double cost_jesus = -2.5;
 
   switch (brush)
   {
     case normal: return cost_normal;
     case water:  return cost_water;
     case mud:    return cost_mud;
+	case jesus:  return cost_jesus;
     default:     return MaxDouble;
   };
 }
@@ -427,7 +429,7 @@ void Pathfinder::Render()
   //render all the cells
   for (int nd=0; nd<m_pGraph->NumNodes(); ++nd)
   {
-    int left   = (int)(m_pGraph->GetNode(nd).Pos().x - m_dCellWidth/2.0);
+    int left   = (int)(m_pGraph->GetNode(nd).Pos().x - m_dCellWidth/10.0);
     int top    = (int)(m_pGraph->GetNode(nd).Pos().y - m_dCellHeight/2.0);
     int right  = (int)(1+m_pGraph->GetNode(nd).Pos().x + m_dCellWidth/2.0);
     int bottom = (int)(1+m_pGraph->GetNode(nd).Pos().y + m_dCellHeight/2.0);

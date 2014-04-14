@@ -5,7 +5,7 @@
 const int WindowWidth  = 600;
 const int WindowHeight = 600;
 
-const int ClientWidth  = 500;
+const int ClientWidth  = 525;
 const int ClientHeight = 500;
 
 

@@ -1,4 +1,4 @@
-//Microsoft Developer Studio generated resource script.
+// Microsoft Visual C++ generated resource script.
 //
 #include "resource.h"
 
@@ -13,20 +13,18 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// English (U.K.) resources
+// English (United Kingdom) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
-#ifdef _WIN32
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
 #pragma code_page(1252)
-#endif //_WIN32
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Toolbar
 //
 
-IDR_TOOLBAR1 TOOLBAR DISCARDABLE  16, 15
+IDR_TOOLBAR1 TOOLBAR 16, 15
 BEGIN
     BUTTON      ID_BUTTON_END
     SEPARATOR
@@ -47,7 +45,7 @@ END
 // Bitmap
 //
 
-IDR_TOOLBAR1            BITMAP  DISCARDABLE     "toolbar1.bmp"
+IDR_TOOLBAR1            BITMAP                  "toolbar1.bmp"
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -55,18 +53,18 @@ IDR_TOOLBAR1            BITMAP  DISCARDABLE     "toolbar1.bmp"
 // TEXTINCLUDE
 //
 
-1 TEXTINCLUDE DISCARDABLE 
+1 TEXTINCLUDE 
 BEGIN
     "resource.h\0"
 END
 
-2 TEXTINCLUDE DISCARDABLE 
+2 TEXTINCLUDE 
 BEGIN
     "#include ""afxres.h""\r\n"
     "\0"
 END
 
-3 TEXTINCLUDE DISCARDABLE 
+3 TEXTINCLUDE 
 BEGIN
     "\r\n"
     "\0"
@@ -80,18 +78,34 @@ END
 // Menu
 //
 
-IDR_MENU1 MENU DISCARDABLE 
+IDR_MENU1 MENU
 BEGIN
     POPUP "File"
     BEGIN
         MENUITEM "Save As",                     ID_MENU_SAVEAS
         MENUITEM "Load",                        ID_MENU_LOAD
         MENUITEM "New",                         ID_MENU_NEW
+        MENUITEM "SAVEASSSS",                   ID_MENU_SAVEASSSS
     END
     POPUP "View"
     BEGIN
         MENUITEM "Graph",                       IDM_VIEW_GRAPH
         MENUITEM "Tiles",                       IDM_VIEW_TILES
+    END
+    POPUP "Elements"
+    BEGIN
+        MENUITEM "Mud",                         ID_ELEMENTS_MUD
+        MENUITEM "Water",                       ID_ELEMENTS_WATER
+        MENUITEM "Obstacle",                    ID_ELEMENTS_OBSTACLE
+        MENUITEM "White Space",                 ID_ELEMENTS_NORMAL
+        MENUITEM "Jesus",                       ID_ELEMENTS_JESUS40028
+    END
+    POPUP "Pathfinding"
+    BEGIN
+        MENUITEM "Breadth First",               ID_PATHFINDING_BF
+        MENUITEM "Depth First",                 ID_PATHFINDING_DF
+        MENUITEM "Dijkistra",                   ID_PATHFINDING_DIJKISTRA
+        MENUITEM "A*",                          ID_PATHFINDING_A
     END
 END
 
@@ -103,9 +117,8 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDI_ICON1               ICON    DISCARDABLE     "icon1.ico"
+IDI_ICON1               ICON                    "icon1.ico"
 
-#ifndef _MAC
 /////////////////////////////////////////////////////////////////////////////
 //
 // Version
@@ -128,18 +141,14 @@ BEGIN
     BEGIN
         BLOCK "080904b0"
         BEGIN
-            VALUE "Comments", "\0"
-            VALUE "CompanyName", "IS\0"
-            VALUE "FileDescription", "Pathfinder\0"
-            VALUE "FileVersion", "1, 0, 0, 1\0"
-            VALUE "InternalName", "Pathfinder\0"
-            VALUE "LegalCopyright", "Copyright © 2004\0"
-            VALUE "LegalTrademarks", "\0"
-            VALUE "OriginalFilename", "Pathfinder.exe\0"
-            VALUE "PrivateBuild", "\0"
-            VALUE "ProductName", "IS Pathfinder\0"
-            VALUE "ProductVersion", "1, 0, 0, 1\0"
-            VALUE "SpecialBuild", "\0"
+            VALUE "CompanyName", "IS"
+            VALUE "FileDescription", "Pathfinder"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "Pathfinder"
+            VALUE "LegalCopyright", "Copyright © 2004"
+            VALUE "OriginalFilename", "Pathfinder.exe"
+            VALUE "ProductName", "IS Pathfinder"
+            VALUE "ProductVersion", "1, 0, 0, 1"
         END
     END
     BLOCK "VarFileInfo"
@@ -148,15 +157,13 @@ BEGIN
     END
 END
 
-#endif    // !_MAC
-
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // String Table
 //
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_BUTTON_STOP          "End"
     ID_BUTTON_START         "Start of Path"
@@ -171,7 +178,12 @@ BEGIN
     ID_BUTTON_ASTAR         "A*"
 END
 
-#endif    // English (U.K.) resources
+STRINGTABLE
+BEGIN
+    ID_BUTTON_JESUS         "Walk on Anything"
+END
+
+#endif    // English (United Kingdom) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

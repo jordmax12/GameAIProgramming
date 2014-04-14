@@ -265,6 +265,12 @@ LRESULT CALLBACK WindowProc (HWND   hwnd,
 
         break;
 
+	  case ID_BUTTON_JESUS:
+
+		  g_Pathfinder->ChangeBrush(Pathfinder::jesus);
+
+		  break;
+
       case ID_BUTTON_NORMAL:
 
         g_Pathfinder->ChangeBrush(Pathfinder::normal);
@@ -324,6 +330,17 @@ LRESULT CALLBACK WindowProc (HWND   hwnd,
         
         break;
 
+	  case ID_MENU_SAVEASSSS:
+
+		  FileSaveDlg(hwnd, szFileName, szTitleName, "pathfinder files (*.map)", "map");
+
+		  if (strlen(szTitleName) > 0)
+		  {
+			  g_Pathfinder->Save(szTitleName);
+		  }
+
+		  break;
+
       case ID_MENU_NEW:
         
          //create the graph
@@ -370,6 +387,63 @@ LRESULT CALLBACK WindowProc (HWND   hwnd,
           }
 
           break;
+
+		case ID_PATHFINDING_BF:
+
+			g_Pathfinder->CreatePathBFS(); CurrentSearchButton = ID_BUTTON_BFS; break;
+
+			break;
+
+		case ID_PATHFINDING_DF:
+
+			g_Pathfinder->CreatePathDFS(); CurrentSearchButton = ID_BUTTON_DFS; break;
+
+			break;
+
+		case ID_PATHFINDING_DIJKISTRA:
+
+			g_Pathfinder->CreatePathDijkstra(); CurrentSearchButton = ID_BUTTON_DIJKSTRA; break;
+
+			break;
+
+		case ID_PATHFINDING_A:
+
+			g_Pathfinder->CreatePathAStar(); CurrentSearchButton = ID_BUTTON_ASTAR; break;
+
+			break;
+
+		case ID_ELEMENTS_MUD:
+
+			g_Pathfinder->ChangeBrush(Pathfinder::mud);
+
+			break;
+
+		case ID_ELEMENTS_WATER:
+
+			g_Pathfinder->ChangeBrush(Pathfinder::water);
+
+			break;
+
+		case ID_ELEMENTS_NORMAL:
+
+			g_Pathfinder->ChangeBrush(Pathfinder::normal);
+
+			break;
+
+		case ID_ELEMENTS_OBSTACLE:
+
+			g_Pathfinder->ChangeBrush(Pathfinder::obstacle);
+
+			break;
+
+		case ID_ELEMENTS_JESUS:
+
+			g_Pathfinder->ChangeBrush(Pathfinder::jesus);
+
+			break;
+
+
+
 
       }//end switch
 
@@ -471,7 +545,7 @@ LRESULT CALLBACK WindowProc (HWND   hwnd,
 HWND CreateToolBar(HWND hwndParent, HINSTANCE hinstMain)
 {
 
-  const int NumButtons = 11;
+  const int NumButtons = 12;
   
   //load in the common ctrls from the dll
   INITCOMMONCONTROLSEX cc;
@@ -554,48 +628,55 @@ HWND CreateToolBar(HWND hwndParent, HINSTANCE hinstMain)
   button[4].dwData    = NULL;
   button[4].iString   = NULL;
 
-  button[5].iBitmap   = 5;
-  button[5].idCommand = ID_BUTTON_NORMAL;
-  button[5].fsState   = TBSTATE_ENABLED;
-  button[5].fsStyle   = TBSTYLE_CHECKGROUP;
-  button[5].dwData    = NULL;
-  button[5].iString   = NULL;
+  button[5].iBitmap = 5;
+  button[5].idCommand = ID_BUTTON_JESUS;
+  button[5].fsState = TBSTATE_ENABLED;
+  button[5].fsStyle = TBSTYLE_CHECKGROUP;
+  button[5].dwData = NULL;
+  button[5].iString = NULL;
 
-  //this creates a separater
-  button[6].iBitmap   = 265;
-  button[6].idCommand = 0;
-  button[6].fsState   = NULL;
-  button[6].fsStyle   = TBSTYLE_SEP;
+  button[6].iBitmap   = 6;
+  button[6].idCommand = ID_BUTTON_NORMAL;
+  button[6].fsState   = TBSTATE_ENABLED;
+  button[6].fsStyle   = TBSTYLE_CHECKGROUP;
   button[6].dwData    = NULL;
   button[6].iString   = NULL;
 
-  button[7].iBitmap   = 6;
-  button[7].idCommand = ID_BUTTON_DFS;
-  button[7].fsState   = TBSTATE_ENABLED;
-  button[7].fsStyle   = TBSTYLE_CHECKGROUP;
+  //this creates a separater
+  button[7].iBitmap   = 265;
+  button[7].idCommand = 0;
+  button[7].fsState   = NULL;
+  button[7].fsStyle   = TBSTYLE_SEP;
   button[7].dwData    = NULL;
   button[7].iString   = NULL;
 
   button[8].iBitmap   = 7;
-  button[8].idCommand = ID_BUTTON_BFS;
+  button[8].idCommand = ID_BUTTON_DFS;
   button[8].fsState   = TBSTATE_ENABLED;
   button[8].fsStyle   = TBSTYLE_CHECKGROUP;
   button[8].dwData    = NULL;
   button[8].iString   = NULL;
 
   button[9].iBitmap   = 8;
-  button[9].idCommand = ID_BUTTON_DIJKSTRA;
+  button[9].idCommand = ID_BUTTON_BFS;
   button[9].fsState   = TBSTATE_ENABLED;
   button[9].fsStyle   = TBSTYLE_CHECKGROUP;
   button[9].dwData    = NULL;
   button[9].iString   = NULL;
 
   button[10].iBitmap   = 9;
-  button[10].idCommand = ID_BUTTON_ASTAR;
+  button[10].idCommand = ID_BUTTON_DIJKSTRA;
   button[10].fsState   = TBSTATE_ENABLED;
   button[10].fsStyle   = TBSTYLE_CHECKGROUP;
   button[10].dwData    = NULL;
   button[10].iString   = NULL;
+
+  button[11].iBitmap   = 10;
+  button[11].idCommand = ID_BUTTON_ASTAR;
+  button[11].fsState   = TBSTATE_ENABLED;
+  button[11].fsStyle   = TBSTYLE_CHECKGROUP;
+  button[11].dwData    = NULL;
+  button[11].iString   = NULL;
 
 
 

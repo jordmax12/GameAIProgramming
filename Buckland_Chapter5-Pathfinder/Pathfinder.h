@@ -39,7 +39,8 @@ public:
     water    = 2,
     mud      = 3,
     source   = 4,
-    target   = 5
+    target   = 5,
+	jesus    = 6
   };
       
   enum algorithm_type
