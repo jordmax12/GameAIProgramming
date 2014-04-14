@@ -34,7 +34,7 @@
 #define ID_ELEMENTS_JESUS40028          40028
 #define ID_ELEMENTS_JESUS               40029
 #define ID_ELEMENTS_NORMAL              40030
-
+//if ( ((i ==0) && (j==0)) || (abs(i) == abs(j)) ) continue;
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED

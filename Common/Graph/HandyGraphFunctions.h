@@ -53,7 +53,8 @@ void GraphHelper_AddAllNeighboursToGridNode(graph_type& graph,
       int nodeY = row+i;
 
       //skip if equal to this node
-      if ( (i == 0) && (j==0) ) continue;
+      //if ( (i == 0) && (j==0) ) continue;
+	  if ( ((i ==0) && (j==0)) || (abs(i) == abs(j)) ) continue;
 
       //check to see if this is a valid neighbour
       if (ValidNeighbour(nodeX, nodeY, NumCellsX, NumCellsY))

@@ -458,6 +458,11 @@ void Pathfinder::Render()
       if (!m_bShowTiles)gdi->BrownPen();
       break;
 
+	case 5:
+		gdi->OrangeBrush();
+		if (!m_bShowTiles)gdi->OrangePen();
+		break;
+
     default:
       gdi->WhiteBrush();
       if (!m_bShowTiles)gdi->WhitePen();
@@ -537,7 +542,7 @@ void Pathfinder::Render()
   if (m_dTimeTaken)
   {
     //draw time taken to complete algorithm
-    string time = ttos(m_dTimeTaken, 8);
+    string time = ttos(m_dTimeTaken, 5);
     string s = "Time Elapsed for " + GetNameOfCurrentSearchAlgorithm() + " is " + time;
     gdi->TextAtPos(1,m_icyClient + 3,s); 
   }
