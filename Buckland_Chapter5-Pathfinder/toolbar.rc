@@ -106,6 +106,7 @@ BEGIN
         MENUITEM "Depth First",                 ID_PATHFINDING_DF
         MENUITEM "Dijkistra",                   ID_PATHFINDING_DIJKISTRA
         MENUITEM "A*",                          ID_PATHFINDING_A
+        MENUITEM "A* Manhattan",                ID_BUTTON_AM
     END
 END
 

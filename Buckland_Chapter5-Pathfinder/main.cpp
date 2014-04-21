@@ -297,7 +297,7 @@ LRESULT CALLBACK WindowProc (HWND   hwnd,
 
       case ID_BUTTON_ASTAR:
 
-        g_Pathfinder->CreatePathAStar(); CurrentSearchButton = ID_BUTTON_ASTAR; break;
+        g_Pathfinder->CreatePathAStar(); CurrentSearchButton = ID_BUTTON_ASTARM; break;
 
         break;
 
@@ -409,6 +409,12 @@ LRESULT CALLBACK WindowProc (HWND   hwnd,
 		case ID_PATHFINDING_A:
 
 			g_Pathfinder->CreatePathAStar(); CurrentSearchButton = ID_BUTTON_ASTAR; break;
+
+			break;
+
+		case ID_PATHFINDING_AM:
+
+			g_Pathfinder->CreatePathAStarM(); CurrentSearchButton = ID_BUTTON_ASTAR; break;
 
 			break;
 

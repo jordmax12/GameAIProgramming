@@ -335,6 +335,32 @@ void Pathfinder::CreatePathAStar()
 
 }
 
+void Pathfinder::CreatePathAStarM()
+{
+	//set current algorithm
+	m_CurrentAlgorithm = search_astar;
+
+	//create and start a timer
+	PrecisionTimer timer; timer.Start();
+
+	//create a couple of typedefs so the code will sit comfortably on the page   
+	typedef Graph_SearchAStar<NavGraph, Heuristic_EuclidM> AStarSearch;
+
+	//create an instance of the A* search using the Euclidean heuristic
+	AStarSearch AStar(*m_pGraph, m_iSourceCell, m_iTargetCell);
+
+
+	//record the time taken  
+	m_dTimeTaken = timer.TimeElapsed();
+
+	m_Path = AStar.GetPathToTarget();
+
+	m_SubTree = AStar.GetSPT();
+
+	m_dCostToTarget = AStar.GetCostToTarget();
+
+}
+
 //---------------------------Load n save methods ------------------------------
 //-----------------------------------------------------------------------------
 void Pathfinder::Save( char* FileName)
@@ -412,6 +438,7 @@ std::string Pathfinder::GetNameOfCurrentSearchAlgorithm()const
   {
   case non: return "";
   case search_astar: return "A Star";
+  case search_astarm: return "A Star Manhattan";
   case search_bfs: return "Breadth First";
   case search_dfs: return "Depth First";
   case search_dijkstra: return "Dijkstras";

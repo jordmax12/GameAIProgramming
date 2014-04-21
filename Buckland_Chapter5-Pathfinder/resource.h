@@ -33,14 +33,18 @@
 #define ID_BUTTON_JESUS                 40028
 #define ID_ELEMENTS_JESUS40028          40028
 #define ID_ELEMENTS_JESUS               40029
+#define ID_PATHFINDING_A40029           40029
 #define ID_ELEMENTS_NORMAL              40030
-//if ( ((i ==0) && (j==0)) || (abs(i) == abs(j)) ) continue;
+#define ID_PATHFINDING_AM               40031
+#define ID_BUTTON_AM                    40031
+#define ID_BUTTON_ASTARM                40032
+
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        105
-#define _APS_NEXT_COMMAND_VALUE         40029
+#define _APS_NEXT_COMMAND_VALUE         40032
 #define _APS_NEXT_CONTROL_VALUE         1000
 #define _APS_NEXT_SYMED_VALUE           101
 #endif

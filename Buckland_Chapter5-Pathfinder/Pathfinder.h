@@ -47,6 +47,7 @@ public:
   {
     non,
     search_astar,
+	search_astarm,
     search_bfs,
     search_dfs,
     search_dijkstra
@@ -151,6 +152,7 @@ public:
   void CreatePathBFS();
   void CreatePathDijkstra();
   void CreatePathAStar();
+  void CreatePathAStarM();
   void MinSpanningTree();
 
   //if m_bShowGraph is true the graph will be rendered
