@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ApplyDecalOnWasShot.cs">
+    <Files>
+      <File FileName="Assets/RaycastShoot.cs" Line="26" Column="95" />
+      <File FileName="Assets/RaycastTest.cs" Line="18" Column="1" />
+      <File FileName="Assets/ApplyDecalOnWasShot.cs" Line="8" Column="54" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
